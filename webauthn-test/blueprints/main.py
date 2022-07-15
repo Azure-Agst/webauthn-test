@@ -11,14 +11,14 @@ main = Blueprint(
 
 @main.route("/", methods=['GET'])
 def index():
-    if session['username']:
+    if 'username' in session:
         return redirect(url_for('main.dashboard'))
     else:
         return redirect(url_for("main.login"))
 
 @main.route("/dashboard", methods=['GET'])
 def dashboard():
-    if session['username']:
+    if 'username' in session:
         return render_template(
             'dashboard.html',
             user=session['username']

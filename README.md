@@ -2,6 +2,23 @@
 
 A small Python web server utilizing the `webauthn` library to successfully implement WebAuthn. Fun afternoon project that taught me a bunch.
 
+## Running
+
+### Docker:
+
+```
+$ docker run -dp 5000:5000 ghcr.io/azure-agst/webauthn-test
+```
+
+### Python Virtualenv:
+
+```
+$ python3 -m venv .venv
+$ source .vemv/bin/activate
+$ pip install -r requirements.txt
+$ flask run
+```
+
 ## Registration Procedure
 
 1. Client sends a request to the server with registration info. (i.e. username, email, etc.)
